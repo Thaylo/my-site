@@ -4,6 +4,7 @@ slug: big-test
 date: 2018-01-03
 language: en
 generate-card: false
+cover: ./cover.jpg
 imageTw: ./cover.jpg
 imageFb: ./cover.jpg
 tags:
