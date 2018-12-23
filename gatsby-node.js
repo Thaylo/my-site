@@ -22,6 +22,7 @@ exports.createPages = async ({ graphql, actions }) => {
                 slug
                 type
                 tags
+                draft
               }
             }
           }
