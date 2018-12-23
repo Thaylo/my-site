@@ -2,13 +2,15 @@ import React, { Fragment } from 'react'
 
 import PostsListItem from './posts-list-item'
 
+
 class PostsList extends React.Component {
   render() {
     const { posts } = this.props
+    const publishedPosts = posts.filter(post => !post.node.frontmatter.draft)
 
     return (
       <Fragment>
-        {posts.map(post => {
+        {publishedPosts.length ? publishedPosts.map(post => {
           const props = {
             title: post.node.frontmatter.title,
             excerpt: post.node.excerpt,
@@ -18,7 +20,7 @@ class PostsList extends React.Component {
             tags: post.node.frontmatter.tags || [],
           }
           return <PostsListItem key={props.slug} {...props} />
-        })}
+        }) : <h3 style={{textAlign: 'center'}}>Nenhum post ainda...</h3>}
       </Fragment>
     )
   }

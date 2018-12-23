@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyledLink } from '../commons'
+import { StyledLink, Text } from '../commons'
 import Flag from '../flag'
 import siteConfig from '../../../data/siteConfig'
 
@@ -9,7 +9,7 @@ class RelatedPosts extends React.Component {
 
     return (
       <ul>
-        {posts.map(post => {
+        {posts.length ? posts.map(post => {
           const title = post.node.frontmatter.title
           const slug = post.node.frontmatter.slug
           const language = post.node.frontmatter.language || 'en'
@@ -21,7 +21,7 @@ class RelatedPosts extends React.Component {
               </StyledLink>
             </li>
           )
-        })}
+        }) : <Text>Nenhum post ainda...</Text>}
       </ul>
     )
   }
