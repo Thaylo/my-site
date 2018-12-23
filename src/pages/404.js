@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import Layout from '../components/layout'
+import Hero from '../components/hero'
 import Wrapper from '../components/wrapper'
 import SEO from '../components/SEO'
 import RelatedPosts from '../components/related-posts'
@@ -13,7 +14,7 @@ const MainTitle = styled.h1`
   font-size: 3rem;
 `
 
-const Ghost = styled.p`
+const Ovni = styled.p`
   line-height: 1.5;
   text-align: center;
   font-size: 7rem;
@@ -26,20 +27,28 @@ const SubTitle = styled.h2`
   margin-top: 44px;
 `
 
+const CenteredText = styled(Text)`
+  text-align: center;
+`
+
 class NotFoundPage extends React.Component {
   render() {
-    const posts = this.props.data.allMarkdownRemark.edges
+    const posts = this.props.data.allMarkdownRemark.edges.filter(post => !post.node.frontmatter.draft)
 
     return (
       <Layout location={this.props.location} noCover={true}>
         <SEO title="Page Not Found" />
+        <Hero
+          heroImg='/images/404.jpeg'
+          title='404'
+        />
         <Wrapper>
           <MainTitle>404 Page Not Found</MainTitle>
-          <Ghost>👻</Ghost>
-          <Text>
+          <Ovni>🛸</Ovni>
+          <CenteredText>
             Looks like you've followed a broken link or entered a URL that
             doesn't exist on this site.
-          </Text>
+          </CenteredText>
 
           <SubTitle>Recent Posts</SubTitle>
 
@@ -68,6 +77,7 @@ export const pageQuery = graphql`
             tags
             language
             slug
+            draft
           }
         }
       }
