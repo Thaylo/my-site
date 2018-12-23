@@ -6,7 +6,7 @@ const FooterWrapper = styled.footer`
   text-align: left;
   padding-top: 30px;
   padding-bottom: 50px;
-  background-color: rgba(32, 35, 42, 0.85);
+  background-color: #25303B;
   color: #ffffff;
   padding-left: 20px;
   padding-right: 20px;

@@ -11,7 +11,7 @@ const HeaderWrapper = styled.header`
   display: block;
   width: 100%;
   z-index: 1000;
-  background-color: rgba(32, 35, 42, 0.85);
+  background-color: #25303B;
 `
 
 const HeaderNav = styled.nav`
@@ -25,6 +25,7 @@ const HeaderNav = styled.nav`
   justify-content: flex-end;
   overflow-x: auto;
   overflow-y: hidden;
+  background-color: #25303B;
 `
 
 const HeaderLink = styled(Link)`
