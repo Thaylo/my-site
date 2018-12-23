@@ -1,15 +1,13 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+// import { graphql } from 'gatsby'
 import { Container, Row, Col } from 'react-awesome-styled-grid'
 import { FaGithub, FaLinkedin, FaEnvelope, FaTwitter } from "react-icons/fa"
 import styled from 'styled-components'
 
 import Layout from '../components/layout'
-import Content from '../components/content'
 import Wrapper from '../components/wrapper'
 import Hero from '../components/hero'
 import SEO from '../components/SEO'
-import Disqus from '../components/disqus'
 import SkillBar from '../components/skill-bar'
 import Timeline from '../components/timeline'
 import Repositories from '../components/repositories'
@@ -19,7 +17,10 @@ const profile = {
   firstName: "Francisco",
   lastName: "Santos",
   occupation: "Frontend Developer",
-  bio: ``,
+  bio: `Desenvolvedor, apaixonado pelo que faço. Sempre interessado em como os sites foram feitos, comecei a estudar HTML por hobby.<br />
+  Em 2012 comecei a trabalhar como técnico de suporte e me aproximei dos desenvolvedores.
+  Em 2015, comecei a estudar C# e comecei a contribuir com a equipe dando manutenção em uma aplicação em C# e .NET.<br />
+  Atualmente atuo como desenvolvedor frontend e trabalho principalmente com <strong>Javascript, NodeJS e React.</strong>`,
   social: {
     twitter: "https://twitter.com/_franciscodf",
     linkedin: "https://www.linkedin.com/in/santos-francisco",
@@ -64,9 +65,8 @@ class Home extends React.Component {
     const page = {
       title: 'Hello! I\'m Francisco!',
       cover: {
-        publicURL: 'https://images.unsplash.com/photo-1533892743580-890e5b193113?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80'
+        publicURL: '/images/home.jpeg'
       }
-
     }
 
     return (
@@ -108,29 +108,14 @@ class Home extends React.Component {
           </Row>
           <Row>
             <Col xs={4} sm={4}>
-              <div>
-                <Title>Sobre</Title>
-                {/* <p>{profile.bio && profile.bio}</p> */}
-                <Text>
-                  Desenvolvedor, apaixonado pelo que faço. Sempre interessado em como os sites foram feitos, comecei a estudar HTML por hobby.
-                </Text>
-                <Text>
-                  Em 2012 comecei a trabalhar como técnico de suporte e me aproximei dos desenvolvedores.
-                  Em 2015, comecei a estudar C# e comecei a contribuir com a equipe dando manutenção em uma aplicação em C# e .NET.
-                </Text>
-                <Text>
-                  Atualmente atuo como desenvolvedor frontend e trabalho principalmente com <strong>Javascript, NodeJS e React.</strong>
-                </Text>
-              </div>
+              <Title>Sobre</Title>
+              {profile.bio && <Text dangerouslySetInnerHTML={{ __html: profile.bio }}></Text>}
             </Col>
             <Col xs={4} sm={4}>
-              <div>
-                <Title>Skills</Title>
-                {profile.skills.map(skill => (
-                  <SkillBar key={skill.name} name={skill.name} level={skill.level} />
-                ))}
-
-              </div>
+              <Title>Skills</Title>
+              {profile.skills.map(skill => (
+                <SkillBar key={skill.name} name={skill.name} level={skill.level} />
+              ))}
             </Col>
           </Row>
           <Separator />
@@ -139,22 +124,12 @@ class Home extends React.Component {
           <Repositories />
         </Container>
         </Wrapper>
-
-        {false && (
-          <Wrapper>
-            <Disqus
-              slug={page.slug}
-              title={page.title}
-            />
-          </Wrapper>
-        )}
       </Layout>
     )
   }
 }
 
 export default styled(Home)`
-
   .page-content {
     max-width: 100%;
     margin-bottom: 40px;
@@ -162,13 +137,14 @@ export default styled(Home)`
 
   .avatar {
     align-items: center;
+  margin-bottom: 24px;
   }
 
   .avatar__image {
     box-shadow: 3px 3px 15px 0px rgba(0,0,0,0.75);
     max-width: 200px;
     border-radius: 100px;
-    margin: 0 auto;
+    margin: 0 auto 24px;
   }
 
   .social {

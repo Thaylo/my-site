@@ -127,7 +127,7 @@ export default styled(Timeline)`
     content: '';
     position: absolute;
     top: -5px;
-    left: 40px;
+    left: 30%;
     width: 10px; 
     height: 10px;
     transform: rotate(-45deg);
@@ -155,17 +155,17 @@ export default styled(Timeline)`
   }
 
   ${p => config().media['sm']`
-    .timeline__item div.inner {
-      width: 40%;
-      margin: 5px 0 0 0;
-    }
+  .timeline__item div.inner {
+    width: 40%;
+    margin: 5px 0 0 0;
+  }
 
-    .timeline__item div.inner h2:after {
-      top: 20px;
-      left: unset;
-      right: -5px;
-    }
-    .timeline__item:nth-child(2n+2) div.inner h2:after {
+  .timeline__item div.inner h2:after {
+    top: 20px;
+    left: unset;
+    right: -5px;
+  }
+  .timeline__item:nth-child(2n+2) div.inner h2:after {
     left: -5px;
   }
 
