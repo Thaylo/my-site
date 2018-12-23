@@ -11,8 +11,8 @@ import SEO from '../components/SEO'
 
 class BlogList extends React.Component {
   render() {
-    // const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const posts = get(this, 'props.data.allMarkdownRemark.edges')
+      .filter(post => !post.node.frontmatter.draft)
     const { pageContext } = this.props
 
     return (
@@ -58,6 +58,7 @@ export const pageQuery = graphql`
             tags
             language
             slug
+            draft
           }
         }
       }
