@@ -7,7 +7,6 @@ const HeroContainer = styled.div`
   position: relative;
   display: table;
   width: 100%;
-  height: 350px;
   overflow: hidden;
   background-repeat: no-repeat;
   background-position: center;
@@ -31,11 +30,10 @@ const HeroTitle = styled.h1`
 
 class Hero extends React.Component {
   render() {
-    const heroImg = this.props.heroImg || withPrefix(siteConfig.siteCover)
-    const { title } = this.props
+    const { title, className } = this.props
 
     return (
-      <HeroContainer style={{ backgroundImage: `url("${heroImg}")` }}>
+      <HeroContainer className={className}>
         <TitleContainer>
           <HeroTitle>{title}</HeroTitle>
         </TitleContainer>
@@ -44,4 +42,13 @@ class Hero extends React.Component {
   }
 }
 
-export default Hero
+export default styled(Hero)`
+  
+  ${p => `background-image: url(${p.heroImg || withPrefix(siteConfig.siteCover)});`}
+
+  height: 70vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+`
