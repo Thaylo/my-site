@@ -7,7 +7,7 @@ Repository with code from my personal website.
 
 Site: [thaylo.github.io](http://thaylo.github.io)
 
-LinkedIn: [https://www.linkedin.com/in/thaylo-freitas-53461b32/en](https://www.linkedin.com/in/thaylo-freitas-53461b32/en)
+LinkedIn: [https://www.linkedin.com/in/thaylo-freitas](https://www.linkedin.com/in/thaylo-freitas)
 
 
 

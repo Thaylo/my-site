@@ -20,7 +20,7 @@ const profile = {
   bio: `An auspicious engineer looking for a deeper understanding of social and technological transformations.`,
   social: {
     twitter: 'https://twitter.com/_Thaylo_',
-    linkedin: 'https://www.linkedin.com/in/thaylo-freitas-53461b32/en',
+    linkedin: 'https://www.linkedin.com/in/thaylo-freitas/en',
     github: 'https://github.com/thaylo',
     email: 'thayloxavier@gmail.com',
   },
