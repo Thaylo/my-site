@@ -53,7 +53,7 @@ const jobs = [
 const Timeline = ({ className }) => {
   return (
     <div className={className}>
-      <h1>Experiências</h1>
+      <h1>Experiences</h1>
       {jobs.map(job => (
         <article
           key={job.begin.month + job.begin.year}
@@ -65,7 +65,7 @@ const Timeline = ({ className }) => {
               <span className="timeline__year">{job.begin.year}</span>
             </span>
             <h2 className="timeline__title">
-              {job.occupation} na {job.company} <br />
+              {job.occupation} at {job.company} <br />
               <small className="timeline__title--small">
                 ({job.duration || 'até o momento'})
               </small>
