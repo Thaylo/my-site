@@ -30,6 +30,10 @@ const profile = {
       level: 90,
     },
     {
+      name: 'C/C++',
+      level: 85,
+    },
+    {
       name: 'Robotics and Automation',
       level: 80,
     },
@@ -38,8 +42,8 @@ const profile = {
       level: 80,
     },
     {
-      name: 'C/C++',
-      level: 85,
+      name: 'Git',
+      level: 75,
     },
     {
       name: 'Python',
@@ -53,10 +57,7 @@ const profile = {
       name: 'SQL',
       level: 50,
     },
-    {
-      name: 'Git',
-      level: 75,
-    },
+
     {
       name: 'Docker',
       level: 50,
