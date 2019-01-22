@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
-import { FaGithub } from "react-icons/fa"
+import { FaGithub } from 'react-icons/fa'
 
 const HeaderWrapper = styled.header`
   position: fixed;
@@ -11,7 +11,7 @@ const HeaderWrapper = styled.header`
   display: block;
   width: 100%;
   z-index: 1000;
-  background-color: #25303B;
+  background-color: #25303b;
 `
 
 const HeaderNav = styled.nav`
@@ -25,7 +25,7 @@ const HeaderNav = styled.nav`
   justify-content: flex-end;
   overflow-x: auto;
   overflow-y: hidden;
-  background-color: #25303B;
+  background-color: #25303b;
 `
 
 const HeaderLink = styled(Link)`
@@ -41,8 +41,8 @@ const HeaderLink = styled(Link)`
   min-width: 42px;
   z-index: 10;
 `
-const GithubLink = styled(({className})=>(
-  <a className={className} href='https://github.com/santosfrancisco' target='_blank'>
+const GithubLink = styled(({ className }) => (
+  <a className={className} href="https://github.com/thaylo" target="_blank">
     <FaGithub size={32} />
   </a>
 ))`
