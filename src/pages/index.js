@@ -26,6 +26,18 @@ const profile = {
   },
   skills: [
     {
+      name: 'Calculus',
+      level: 90,
+    },
+    {
+      name: 'Robotics and Automation',
+      level: 80,
+    },
+    {
+      name: 'MATLAB',
+      level: 80,
+    },
+    {
       name: 'C/C++',
       level: 85,
     },
@@ -51,19 +63,7 @@ const profile = {
     },
     {
       name: 'Google Kubernetes Engine',
-      level: 35,
-    },
-    {
-      name: 'Calculus',
-      level: 90,
-    },
-    {
-      name: 'Robotics',
-      level: 70,
-    },
-    {
-      name: 'MATLAB',
-      level: 70,
+      level: 40,
     },
   ],
 }
