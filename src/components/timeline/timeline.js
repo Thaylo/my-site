@@ -3,36 +3,49 @@ import styled from 'styled-components'
 import { config } from 'react-awesome-styled-grid'
 
 const jobs = [
-
   {
-    company: "Lendico",
+    company: 'Conexos',
     begin: {
-      month: 'apr',
-      year: '2018'
+      month: 'aug',
+      year: '2018',
     },
-    duration: null,
-    occupation: "Desenvolvedor frontend",
-    description: "Integro o time de Frontend responsável pelo desenvolvimento e a manutenção da plataforma online de empréstimos."
-
-  }, {
-    company: "Anapro",
+    duration: '4 mos',
+    occupation: 'Back-end Web Developer',
+    description:
+      'Software Engineering activities and technologies, including but not limited to JAVA, Spring Boot, and Oracle PL/SQL.',
+  },
+  {
+    company: 'Lynx Process',
     begin: {
-      month: 'dec',
-      year: '2016'
+      month: 'nov',
+      year: '2015',
     },
-    duration: '1 ano e 5 meses',
-    occupation: "Desenvolvedor",
-    description: "Desenvolvimento e manutenção, corretiva e preventiva, de aplicações web para o mercado imobiliário."
-  }, {
-    company: "Anapro",
+    duration: '1 yr 2 mos',
+    occupation: 'Constrol Systems Software Engineer',
+    description:
+      'Development of stockpile management and robotic control systems using C#/ Unity3D and MATLAB, including automation of stockyard machine operations for Vale SafeArray.',
+  },
+  {
+    company: 'APPI Tecnologia',
     begin: {
       month: 'set',
-      year: '2012'
+      year: '2014',
     },
-    duration: '4 anos e 3 meses',
-    occupation: "Tecnico de suporte",
-    description: "Responsável pela implantação e parametrização do sistema, treinamentos e suporte ao cliente. Atuando também presencialmente em lançamentos imobiliários garantindo o sucesso e bom uso da ferramenta."
+    duration: '10 mos',
+    occupation: 'Platform Developer',
+    description: 'Development in C/C++ for embedded systems (POSes).',
+  },
 
+  {
+    company: 'PadTec',
+    begin: {
+      month: 'apr',
+      year: '2012',
+    },
+    duration: '1 yr 7 mos',
+    occupation: 'Intern',
+    description:
+      'Development in C/C++ for optical transport networks emulators, following the ITU-T recommendations for OTN technology.',
   },
   /* ... */
 ]
@@ -42,13 +55,21 @@ const Timeline = ({ className }) => {
     <div className={className}>
       <h1>Experiências</h1>
       {jobs.map(job => (
-        <article key={job.begin.month + job.begin.year} className='timeline__item'>
+        <article
+          key={job.begin.month + job.begin.year}
+          className="timeline__item"
+        >
           <div className="inner">
             <span className="timeline__date">
               <span className="timeline__month">{job.begin.month}</span>
               <span className="timeline__year">{job.begin.year}</span>
             </span>
-            <h2 className='timeline__title'>{job.occupation} na {job.company} <br /><small className='timeline__title--small'>({job.duration || 'até o momento'})</small></h2>
+            <h2 className="timeline__title">
+              {job.occupation} na {job.company} <br />
+              <small className="timeline__title--small">
+                ({job.duration || 'até o momento'})
+              </small>
+            </h2>
             <p>{job.description}</p>
           </div>
         </article>
@@ -68,7 +89,7 @@ export default styled(Timeline)`
     margin: 70px 0 0 -1px;
     width: 1px;
     height: calc(100% - 70px);
-    background: #25303B;
+    background: #25303b;
   }
   .timeline__item {
     width: 100%;
@@ -85,7 +106,7 @@ export default styled(Timeline)`
     float: left;
     margin: 85px 0 0 0;
     border-radius: 6px;
-    border: 1px solid #25303B;
+    border: 1px solid #25303b;
   }
   .timeline__date {
     display: block;
@@ -99,7 +120,7 @@ export default styled(Timeline)`
     font-size: 12px;
     font-weight: 900;
     text-transform: uppercase;
-    background: #25303B;
+    background: #25303b;
     color: #fff;
     box-shadow: 0 0 0 7px #fff;
   }
@@ -128,7 +149,7 @@ export default styled(Timeline)`
     position: absolute;
     top: -5px;
     left: 30%;
-    width: 10px; 
+    width: 10px;
     height: 10px;
     transform: rotate(-45deg);
   }
@@ -140,14 +161,14 @@ export default styled(Timeline)`
     color: #656565;
     border-radius: 0 0 6px 6px;
   }
-  .timeline__item:nth-child(2n+2) div.inner {
+  .timeline__item:nth-child(2n + 2) div.inner {
     float: right;
   }
   .timeline__title {
-    background: #25303B;
+    background: #25303b;
   }
   .timeline__title:after {
-    background: #25303B;
+    background: #25303b;
   }
 
   .timeline__title--small {
