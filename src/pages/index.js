@@ -26,28 +26,28 @@ const profile = {
   },
   skills: [
     {
-      name: 'HTML',
-      level: 70,
+      name: 'C/C++',
+      level: 85,
     },
     {
-      name: 'CSS',
+      name: 'Python',
       level: 60,
     },
     {
-      name: 'Javascript',
+      name: 'Java',
       level: 50,
     },
     {
-      name: 'NodeJs',
+      name: 'SQL',
       level: 40,
     },
     {
-      name: 'React',
-      level: 60,
+      name: 'Git',
+      level: 75,
     },
     {
-      name: 'Git',
-      level: 70,
+      name: 'Docker',
+      level: 50,
     },
   ],
 }
