@@ -14,18 +14,15 @@ import Repositories from '../components/repositories'
 import { Text, Title } from '../components/commons'
 
 const profile = {
-  firstName: "Francisco",
-  lastName: "Santos",
-  occupation: "Frontend Developer",
-  bio: `Desenvolvedor, apaixonado pelo que faço. Sempre interessado em como os sites foram feitos, comecei a estudar HTML por hobby.<br />
-  Em 2012 comecei a trabalhar como técnico de suporte e me aproximei dos desenvolvedores.
-  Em 2015, comecei a estudar C# e comecei a contribuir com a equipe dando manutenção em uma aplicação em C# e .NET.<br />
-  Atualmente atuo como desenvolvedor frontend e trabalho principalmente com <strong>Javascript, NodeJS e React.</strong>`,
+  firstName: "Thaylo",
+  lastName: "Freitas",
+  occupation: "Computer Engineer and Software Developer",
+  bio: `An auspicious engineer looking for a deeper understanding of social and technological transformations.`,
   social: {
-    twitter: "https://twitter.com/_franciscodf",
-    linkedin: "https://www.linkedin.com/in/santos-francisco",
-    github: "https://github.com/santosfrancisco",
-    email: "yoshi.df@gmail.com"
+    twitter: "https://twitter.com/_Thaylo_",
+    linkedin: "https://www.linkedin.com/in/thaylo-freitas-53461b32/en",
+    github: "https://github.com/thaylo",
+    email: "thayloxavier@gmail.com"
   },
   skills: [
     {
@@ -63,7 +60,7 @@ const Separator = styled.hr`
 class Home extends React.Component {
   render() {
     const page = {
-      title: 'Hello! I\'m Francisco!',
+      title: 'Hello! I\'m Thaylo!',
       cover: {
         publicURL: '/images/home.jpeg'
       }
@@ -86,7 +83,7 @@ class Home extends React.Component {
             <Container className="page-content" fluid>
           <Row>
             <Col xs={4} className='avatar'>
-              <img 
+              <img
                 className='avatar__image'
                 src='https://avatars1.githubusercontent.com/u/15852005?s=460&v=4' alt=''
               />

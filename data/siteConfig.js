@@ -1,24 +1,24 @@
 module.exports = {
-  siteTitle: 'Francisco Santos',
-  siteDescription: "👋 Hey I'm Francisco!",
-  authorName: 'Francisco Santos',
-  twitterUsername: '_franciscodf',
+  siteTitle: 'Thaylo Xavier',
+  siteDescription: "Hey I'm Thaylo!",
+  authorName: 'Thaylo Freitas',
+  twitterUsername: '_Thaylo_',
   authorAvatar: '/images/avatar.jpeg',
   multilangPosts: true, // enable/disable flags in post lists
   authorDescription: `
-  Hi! I'm Francisco! Developer and passionate about what I do.
+  Hi! I'm Thaylo! Computer Engineer and Software Developer.
   `,
-  siteUrl: 'https://santosfrancisco.github.io/',
-  disqusSiteUrl: 'http://www.devchico.com/',
+  siteUrl: 'https://thaylo.github.io/',
+  disqusSiteUrl: 'https://thaylo.github.io/',
   pathPrefix: '/', // Note: it must *not* have a trailing slash.
   siteCover: '/images/cover.jpeg',
-  googleAnalyticsId: 'UA-47305515-4',
+  googleAnalyticsId: 'UA-132909624-1',
   background_color: '#ffffff',
   theme_color: '#222222',
   display: 'minimal-ui',
   icon: 'src/assets/gatsby-icon.png',
   postsPerPage: 6,
-  disqusShortname: 'yoshidf',
+  disqusShortname: 'thaylo',
   headerLinks: [
     {
       label: 'Home',
@@ -62,17 +62,17 @@ module.exports = {
       'Follow the author',
       {
         label: 'Github',
-        url: 'https://github.com/yoshidf',
+        url: 'https://github.com/thaylo',
         iconClassName: 'fa fa-github',
       },
       {
         label: 'Website',
-        url: 'http://www.devchico.com',
+        url: 'https://thaylo.github.io',
         iconClassName: 'fa fa-globe',
       },
       {
         label: 'Twitter',
-        url: 'https://twitter.com/_franciscodf',
+        url: 'https://twitter.com/_Thaylo_',
         iconClassName: 'fa fa-twitter',
       },
     ],
