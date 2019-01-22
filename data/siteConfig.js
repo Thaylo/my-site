@@ -9,7 +9,7 @@ module.exports = {
   Hi! I'm Thaylo! Computer Engineer and Software Developer.
   `,
   siteUrl: 'https://thaylo.github.io',
-  disqusSiteUrl: 'https://thaylo.github.io',
+  //disqusSiteUrl: 'https://thaylo.github.io',
   pathPrefix: '/', // Note: it must *not* have a trailing slash.
   siteCover: '/images/cover.jpeg',
   googleAnalyticsId: 'UA-132909624-1',

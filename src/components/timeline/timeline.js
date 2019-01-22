@@ -15,6 +15,17 @@ const jobs = [
       'Software Engineering activities and technologies, including but not limited to JAVA, Spring Boot, and Oracle PL/SQL.',
   },
   {
+    company: 'Vixteam',
+    begin: {
+      month: 'jun',
+      year: '2018',
+    },
+    duration: '3 mos',
+    occupation: 'Systems Analyst II',
+    description:
+      'Legacy code maintenance of Manufacturing Execution Systems for Arcelormittal Tubarão',
+  },
+  {
     company: 'Lynx Process',
     begin: {
       month: 'nov',
