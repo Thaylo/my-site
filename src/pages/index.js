@@ -50,7 +50,7 @@ const profile = {
       level: 50,
     },
     {
-      name: 'Kubernetes',
+      name: 'Google Kubernetes Engine',
       level: 35,
     },
     {
