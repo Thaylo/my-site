@@ -123,7 +123,7 @@ class Home extends React.Component {
             </Row>
             <Row>
               <Col xs={4} sm={4}>
-                <Title>Sobre</Title>
+                <Title>About</Title>
                 {profile.bio && (
                   <Text dangerouslySetInnerHTML={{ __html: profile.bio }} />
                 )}
