@@ -1,7 +1,7 @@
 import React from 'react'
 // import { graphql } from 'gatsby'
 import { Container, Row, Col } from 'react-awesome-styled-grid'
-import { FaGithub, FaLinkedin, FaEnvelope, FaTwitter } from "react-icons/fa"
+import { FaGithub, FaLinkedin, FaEnvelope, FaTwitter } from 'react-icons/fa'
 import styled from 'styled-components'
 
 import Layout from '../components/layout'
@@ -14,42 +14,42 @@ import Repositories from '../components/repositories'
 import { Text, Title } from '../components/commons'
 
 const profile = {
-  firstName: "Thaylo",
-  lastName: "Freitas",
-  occupation: "Computer Engineer and Software Developer",
+  firstName: 'Thaylo',
+  lastName: 'Freitas',
+  occupation: 'Computer Engineer and Software Developer',
   bio: `An auspicious engineer looking for a deeper understanding of social and technological transformations.`,
   social: {
-    twitter: "https://twitter.com/_Thaylo_",
-    linkedin: "https://www.linkedin.com/in/thaylo-freitas-53461b32/en",
-    github: "https://github.com/thaylo",
-    email: "thayloxavier@gmail.com"
+    twitter: 'https://twitter.com/_Thaylo_',
+    linkedin: 'https://www.linkedin.com/in/thaylo-freitas-53461b32/en',
+    github: 'https://github.com/thaylo',
+    email: 'thayloxavier@gmail.com',
   },
   skills: [
     {
       name: 'HTML',
-      level: 70
+      level: 70,
     },
     {
       name: 'CSS',
-      level: 60
+      level: 60,
     },
     {
       name: 'Javascript',
-      level: 50
+      level: 50,
     },
     {
       name: 'NodeJs',
-      level: 40
+      level: 40,
     },
     {
       name: 'React',
-      level: 60
+      level: 60,
     },
     {
       name: 'Git',
-      level: 70
-    }
-  ]
+      level: 70,
+    },
+  ],
 }
 
 const Separator = styled.hr`
@@ -60,66 +60,90 @@ const Separator = styled.hr`
 class Home extends React.Component {
   render() {
     const page = {
-      title: 'Hello! I\'m Thaylo!',
+      title: "Hello! I'm Thaylo!",
       cover: {
-        publicURL: '/images/home.jpeg'
-      }
+        publicURL: '/images/home.jpeg',
+      },
     }
 
     return (
       <Layout location={this.props.location}>
         <SEO
           title={page.title}
-          path='/'
+          path="/"
           cover={page.cover && page.cover.publicURL}
         />
 
-        <Hero
-          heroImg={page.cover && page.cover.publicURL}
-          title={page.title}
-        />
+        <Hero heroImg={page.cover && page.cover.publicURL} title={page.title} />
 
-        <Wrapper className={this.props.className} >
-            <Container className="page-content" fluid>
-          <Row>
-            <Col xs={4} className='avatar'>
-              <img
-                className='avatar__image'
-                src='https://avatars1.githubusercontent.com/u/15852005?s=460&v=4' alt=''
-              />
-              <div className="social">
-                {profile.social.github && <a className="social-link github" href={profile.social.github}>
-                  <FaGithub className="social-icon" size="32" />
-                </a>}
-                {profile.social.linkedin && <a className="social-link linkedin" href={profile.social.linkedin}>
-                  <FaLinkedin className="social-icon" size="32" />
-                </a>}
-                {profile.social.twitter && <a className="social-link twitter" href={profile.social.twitter}>
-                  <FaTwitter className="social-icon" size="32" />
-                </a>}
-                {profile.social.email && <a className="social-link email" href={`mailto:${profile.social.email}`}>
-                  <FaEnvelope className="social-icon" size="32" />
-                </a>}
-              </div>
-            </Col>
-          </Row>
-          <Row>
-            <Col xs={4} sm={4}>
-              <Title>Sobre</Title>
-              {profile.bio && <Text dangerouslySetInnerHTML={{ __html: profile.bio }}></Text>}
-            </Col>
-            <Col xs={4} sm={4}>
-              <Title>Skills</Title>
-              {profile.skills.map(skill => (
-                <SkillBar key={skill.name} name={skill.name} level={skill.level} />
-              ))}
-            </Col>
-          </Row>
-          <Separator />
-          <Timeline />
-          <Separator />
-          <Repositories />
-        </Container>
+        <Wrapper className={this.props.className}>
+          <Container className="page-content" fluid>
+            <Row>
+              <Col xs={4} className="avatar">
+                <img
+                  className="avatar__image"
+                  src="https://avatars2.githubusercontent.com/u/567822?s=460&v=4"
+                  alt=""
+                />
+                <div className="social">
+                  {profile.social.github && (
+                    <a
+                      className="social-link github"
+                      href={profile.social.github}
+                    >
+                      <FaGithub className="social-icon" size="32" />
+                    </a>
+                  )}
+                  {profile.social.linkedin && (
+                    <a
+                      className="social-link linkedin"
+                      href={profile.social.linkedin}
+                    >
+                      <FaLinkedin className="social-icon" size="32" />
+                    </a>
+                  )}
+                  {profile.social.twitter && (
+                    <a
+                      className="social-link twitter"
+                      href={profile.social.twitter}
+                    >
+                      <FaTwitter className="social-icon" size="32" />
+                    </a>
+                  )}
+                  {profile.social.email && (
+                    <a
+                      className="social-link email"
+                      href={`mailto:${profile.social.email}`}
+                    >
+                      <FaEnvelope className="social-icon" size="32" />
+                    </a>
+                  )}
+                </div>
+              </Col>
+            </Row>
+            <Row>
+              <Col xs={4} sm={4}>
+                <Title>Sobre</Title>
+                {profile.bio && (
+                  <Text dangerouslySetInnerHTML={{ __html: profile.bio }} />
+                )}
+              </Col>
+              <Col xs={4} sm={4}>
+                <Title>Skills</Title>
+                {profile.skills.map(skill => (
+                  <SkillBar
+                    key={skill.name}
+                    name={skill.name}
+                    level={skill.level}
+                  />
+                ))}
+              </Col>
+            </Row>
+            <Separator />
+            <Timeline />
+            <Separator />
+            <Repositories />
+          </Container>
         </Wrapper>
       </Layout>
     )
@@ -134,11 +158,11 @@ export default styled(Home)`
 
   .avatar {
     align-items: center;
-  margin-bottom: 24px;
+    margin-bottom: 24px;
   }
 
   .avatar__image {
-    box-shadow: 3px 3px 15px 0px rgba(0,0,0,0.75);
+    box-shadow: 3px 3px 15px 0px rgba(0, 0, 0, 0.75);
     max-width: 200px;
     border-radius: 100px;
     margin: 0 auto 24px;
@@ -163,7 +187,7 @@ export default styled(Home)`
   }
 
   a.social-link.linkedin:hover {
-    color: #0077B5;
+    color: #0077b5;
   }
 
   a.social-link.email:hover {

@@ -5,12 +5,12 @@
 Repository with code from my personal website.
 
 
-Site: [www.devchico.com](http://www.devchico.com)
+Site: [thaylo.github.io](http://thaylo.github.io)
 
-LinkedIn: [https://www.linkedin.com/in/santos-francisco/](https://www.linkedin.com/in/santos-francisco/)
+LinkedIn: [https://www.linkedin.com/in/thaylo-freitas-53461b32/en](https://www.linkedin.com/in/thaylo-freitas-53461b32/en)
 
 
 
-## Built with 
+## Built with
 
 GatsbyJS using the [gatsby-starter-morning-dew](https://github.com/maxpou/gatsby-starter-morning-dew) starter
