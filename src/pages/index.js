@@ -39,7 +39,7 @@ const profile = {
     },
     {
       name: 'SQL',
-      level: 40,
+      level: 50,
     },
     {
       name: 'Git',
@@ -48,6 +48,22 @@ const profile = {
     {
       name: 'Docker',
       level: 50,
+    },
+    {
+      name: 'Kubernetes',
+      level: 35,
+    },
+    {
+      name: 'Calculus',
+      level: 90,
+    },
+    {
+      name: 'Robotics',
+      level: 70,
+    },
+    {
+      name: 'MATLAB',
+      level: 70,
     },
   ],
 }
